@@ -1,2 +1,64 @@
 node_modules/ 
-dist/ 
+
+# Build output
+dist/
+build/
+out/
+tmp/
+temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test coverage & outputs
+coverage/
+.nyc_output/
+.playwright/
+playwright-report/
+cypress/videos/
+cypress/screenshots/
+.cypress-cache/
+
+# Tool caches
+.eslintcache
+.parcel-cache/
+.turbo/
+.vite/
+.svelte-kit/
+.next/
+.nuxt/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (keep examples)
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# Package managers (keep lockfiles)
+.npm/
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Misc
+*.swp
+*.swo
