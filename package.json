@@ -1,0 +1,25 @@
+{
+  "name": "typescript_home_work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "t1": "tsx src/task1.ts",
+    "t2": "tsx src/task2.ts",
+    "t3": "tsx src/task3.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+  
+}
