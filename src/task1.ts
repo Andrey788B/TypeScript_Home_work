@@ -1,11 +1,16 @@
 type TotalPriceArgs =
-  | { price: number; discount: number; isInstallment: false; months?: number }
-  | { price: number; discount: number; isInstallment: true;  months: number };
+  | { price: number; discount: number; isInstallment: false; months?: never }
+  | { price: number; discount: number; isInstallment: true; months: number };
 
-export const totalPrice = ({ price, discount, isInstallment, months }: TotalPriceArgs): number => {
-  const discounted = price * (1 - discount / 100);
-  return isInstallment ? discounted / months! : discounted;
+export const totalPrice = (args: TotalPriceArgs): number => {
+  const discounted = args.price * (1 - args.discount / 100);
+
+  if (args.isInstallment) {
+    return discounted / args.months;
+  }
+
+  return discounted;
 };
 
 const price = totalPrice({ price: 100000, discount: 25, isInstallment: true, months: 12 });
-console.log(price); 
+console.log(price);
